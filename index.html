@@ -665,7 +665,7 @@ https://templatemo.com/tm-577-liberty-market
                   
                       <!-- Hidden Video -->
                       <video 
-                        class="hidden-video" 
+                        class="lazy-video hidden-video"
                         width="100%" 
                         controls 
                         preload="none"
@@ -759,7 +759,7 @@ https://templatemo.com/tm-577-liberty-market
 
     <!-- Hidden Video -->
     <video 
-      class="hidden-video" 
+      class="lazy-video hidden-video" 
       width="100%" 
       controls 
       preload="none"
@@ -856,7 +856,7 @@ https://templatemo.com/tm-577-liberty-market
 
     <!-- Hidden Video -->
     <video 
-      class="hidden-video" 
+      class="lazy-video hidden-video"
       width="100%" 
       controls 
       preload="none"
@@ -953,7 +953,7 @@ https://templatemo.com/tm-577-liberty-market
 
     <!-- Hidden Video -->
     <video 
-      class="hidden-video" 
+      class="lazy-video hidden-video"
       width="100%" 
       controls 
       preload="none"
@@ -1032,7 +1032,16 @@ https://templatemo.com/tm-577-liberty-market
     </div>
 </div>
 <!-- project end -->
- 
+ <script>
+  window.addEventListener("load", function () {
+    const videos = document.querySelectorAll(".lazy-video");
+    videos.forEach(video => {
+      video.setAttribute("preload", "auto");
+      video.load();
+    });
+  });
+</script>
+
 
 
 <!-- Experience Section -->
